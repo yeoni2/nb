@@ -1,0 +1,466 @@
+*{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    font-size: 16px;
+}
+/* 맨위 회색 메뉴 */
+.top_menu{
+    position: fixed;
+    z-index: 4;
+    top: 0; left: 0;
+    width: 100%; height: 30px;
+    background: #E5E5E5;
+    display: flex;
+}
+/* "매장찾기","공지사항","FAQS","이벤트" 등의 문구들과 이미지 */
+.top_menu> li{
+    width: 4%; height: 100%;
+    color: #595449;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+/* 첫 이미지 넓이와 띄기 */
+.top_menu> li:first-child{
+    width: 6%;
+    margin-left: 4%;
+}
+/* 두번째 이미지 넓이 */
+.top_menu> li:nth-child(3){
+    width: 3%;
+}
+/* "매장찾기"부터 띄기 */
+.top_menu> li:nth-child(4){
+    margin-left: 60%;
+}
+/* 두개 이미지크기 */
+.top_menu> li> img{
+    width: 90%; height: 47%;
+    margin-top: 8px;
+}
+/* 글씨 사이에 "|" 모양 */
+.top_menu> .stick{
+    width: 1%;
+    font-weight: 100;
+    cursor:default;
+}
+/* 두번째 흰색 메뉴 */
+.second_menu{
+    position: fixed;
+    z-index: 4;
+    top: 30px; left: 0;
+    width: 100%; height: 60px;
+    background: white;
+    display: flex;
+}
+/* 로고와 "men","women","kids","런칭캘린더" 문구 들어가는 박스 */
+.second_menu> .one{
+    display: flex;
+    justify-content: space-between;
+    width:40%; height: 40px;
+    margin-left: 4%;
+    margin-top: 20px;
+}
+/* 로고와 "men","women","kids","런칭캘린더" 문구 */
+.second_menu> .one> li{
+    line-height: 40px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* 로고이미지크기 */
+.second_menu> .one> li> img{
+    width: 100%; height: 80%;
+}
+.second_menu> .sub{
+    position: absolute;
+    top: 60px; left: 4%;
+    width: 100%; height: 380px;
+    display:flex;
+    background: white;
+}
+.second_menu> .sub> div{
+    width: 10%; 
+}
+.second_menu> .sub> div:first-child{
+    margin-left: 7%;
+}
+.second_menu> .sub> div> p{
+    height: 20px;
+    font-weight: 400;
+}
+.second_menu> .sub> div> p:nth-child(2){
+    margin-top: 10px;
+}
+.second_menu> .sub> div> .bold{
+    font-weight: bold;
+}
+.second_menu> .one> .boy:hover .men{
+    display: block;
+}
+/* 아이콘과 "로그인","회원가입" 문구 들어가는 박스 */
+.second_menu> .two{
+    width: 20%; height: 40px;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 51%;
+    line-height: 40px;
+}
+/* 아이콘과 "로그인","회원가입" 문구 */
+.second_menu> .two> li{
+    width: 12%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+/* "로그인","회원가입" */
+.second_menu> .two> li:nth-child(3),
+.second_menu> .two> li:nth-child(5){
+    width: 17%;
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+.second_menu> .two> .stick{
+    width: 2%;
+    font-size: 0.8rem;
+    font-weight: 100;
+    cursor:default;
+}
+.main{
+    position: relative;
+    top: 0; left: 4%;
+    width: 92%; height: 900px;
+}
+.main>.big{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+.main>.big> img{
+    width: 100%; height: 100%;
+}
+.main> .mainimg_1{
+    z-index: 3;
+    animation: mainimg_1_ani 3s infinite linear;
+}
+@keyframes mainimg_1_ani{
+    0%{opacity: 1;}
+    10%{opacity: 1;}
+    20%{opacity: 1;}
+    30%{opacity: 0;}
+    40%{opacity: 0;}
+    50%{opacity: 0;}
+    60%{opacity: 0;}
+    70%{opacity: 0;}
+    80%{opacity: 0;}
+    90%{opacity: 0;}
+    100%{opacity: 0;}
+}
+.main> .mainimg_2{
+    z-index: 2;
+    animation: mainimg_2_ani 3s infinite linear;
+}
+@keyframes mainimg_2_ani{
+    0%{opacity: 0;}
+    10%{opacity: 0;}
+    20%{opacity: 1;}
+    30%{opacity: 1;}
+    40%{opacity: 1;}
+    50%{opacity: 1;}
+    60%{opacity: 1;}
+    70%{opacity: 1;}
+    80%{opacity: 1;}
+    90%{opacity: 0;}
+    100%{opacity: 0;}
+}
+.main> .mainimg_3{
+    z-index: 1;
+    animation: mainimg_3_ani 3s infinite linear;
+}
+@keyframes mainimg_3_ani{
+    0%{opacity: 0;}
+    10%{opacity: 0;}
+    20%{opacity: 0;}
+    30%{opacity: 0;}
+    40%{opacity: 0;}
+    50%{opacity: 0;}
+    60%{opacity: 0;}
+    70%{opacity: 0;}
+    80%{opacity: 1;}
+    90%{opacity: 1;}
+    100%{opacity: 1;}
+}
+.ment{
+    width: 30%; height: 90px;
+    margin-top: 30px;
+    margin-left: 34%;
+    text-align: center;
+}
+.ment> p:first-child{
+    height: 40px;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.two_box{
+    width: 20%; height: 40px;
+    margin-left: 38%;
+    display: flex;
+    justify-content: space-around;
+}
+.two_box> p{
+    width: 40%; height: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.two_box> p:last-child{
+    background: black;
+    color: white;
+}
+.secondMain,
+.ThirdMain{
+    width: 92%; height: 800px;
+    margin-left: 4%;
+    margin-top: 200px;
+}
+.secondMain> img,
+.ThirdMain> img{
+    width: 100%; height: 100%;
+}
+.nb{
+    width: 10%; height: 40px;
+    margin-top: 100px;
+    margin-left: 4%;
+    font-size: 2rem;
+}
+.now{
+    width: 92%; height: 1700px;
+    margin-left: 4%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.now> div{
+    width: 31%; height: 800px;
+}
+.now> div> .now_img{
+    width: 100%; height: 630px;
+}
+.now> div> .now_img> img{
+    width: 100%; height: 100%;
+}
+.now> div> p{
+    width: 100%; height: 40px;
+}
+.now> div> p:nth-child(2){
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+.now> div> .box{
+    width: 60%; height: 40px;
+    display: flex;
+}
+.now> div> .box> p{
+    width: 40%;
+    border: 1px solid black;
+    border-radius:10px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.now> div> .box> p:last-child{
+    background: black;
+    color: white;
+    margin-left: 3%;
+}
+.shop{
+    width: 92%; height: 700px;
+    margin-top: 30px;
+    margin-left: 4%;
+    display: flex;
+    justify-content: space-between;
+}
+.shop> div{
+    width: 31%; height: 100%;
+}
+.shop> div> .shop_img{
+    width: 100%; height: 600px;
+}
+.shop> div> .shop_img> img{
+    width: 100%; height: 100%;
+}
+.shop>div>p{
+    width: 13%; 
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 40%;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+.bar{
+    width: 92%; height: 40px;
+    margin-top: 100px;
+    margin-left: 4%;
+    display: flex;
+}
+.bar> p:first-child{
+    width: 20%;
+    font-size: 1.3rem;
+}
+.bar> p:first-child> span{
+    font-weight: bold;
+}
+.bar> p:nth-child(2){
+    width: 17%;
+    margin-left: 60%;
+}
+.bar> p:nth-child(3){
+    width: 4%; height: 20px;
+    text-align: center;
+    color: #595449;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+}
+.overflow{
+    width: 92%; height: 490px;
+    margin-left: 4%;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.overflow> .poduct{
+    width: 249%; height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.overflow> .poduct> div{
+    width: 9%; height: 100%;
+}
+.overflow> .poduct> div> .product_img{
+    width: 100%; height: 400px;
+}
+.overflow> .poduct> div> .product_img> img{
+    width: 100%; height: 100%;
+}
+.overflow> .poduct> div> p{
+    width: 100%; height: 20px;
+}
+.overflow> .poduct> div> p:nth-child(2){
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+.overflow> .poduct> div> .bold{
+    font-weight: bold
+}
+.button{
+    width: 20%;
+    margin-left: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+.button> p{
+    width: 10%;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+footer{
+    width: 100%; height: 400px;
+    margin-top: 120px;
+    background: #232323;
+}
+footer> .foot_first{
+    width: 100%; height: 100px;
+    border-bottom: 1px solid #393939;
+    display: flex;
+}
+footer> .foot_first> div{
+    width: 10%; 
+    margin-left: 6%;
+    margin-top: 30px;
+}
+footer> .foot_first> div:first-child{
+    margin-left: 20%;
+}
+footer> .foot_first> div> p{
+    color: white;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+footer> .foot_first> div> .sizeUp{
+    font-weight: bold;
+    font-size: 1rem;
+}
+footer> .foot_first> div> .sizeUp:hover{
+    color: red;
+}
+footer> .foot_second{
+    width: 100%; height: 300px;
+    display: flex;
+}
+footer> .foot_second> .need,
+footer> .foot_second> .info,
+footer> .foot_second> .inside{
+    width: 9%; height: 200px;
+    margin-left: 20%;
+    margin-top: 40px;
+    font-size: 0.8rem;
+}
+footer> .foot_second> .need> p,
+footer> .foot_second> .info> p,
+footer> .foot_second> .inside>p{
+    height: 26px;
+    color: #888988;
+}
+footer> .foot_second> .need> p:nth-child(2),
+footer> .foot_second> .info> p:nth-child(2),
+footer> .foot_second> .inside>p:nth-child(2){
+    margin-top: 20px;
+}
+footer> .foot_second> .need> .big,
+footer> .foot_second> .info> .big,
+footer> .foot_second> .inside> .big{
+    font-weight: 600;
+}
+footer> .foot_second> .info,
+footer> .foot_second> .inside{
+    margin-left: 0%;
+}
+footer> .foot_second> div> p:hover{
+    color: red;
+}
+footer> .foot_second> div> .big:hover,
+footer> .foot_second>.text> .customer:hover{
+    color: #888988;
+}
+footer> .foot_second>.text{
+    width: 43%;
+}
+footer> .foot_second>.text> .sns{
+    width: 20%; height: 30px;
+    margin-top: 40px;
+    display: flex;
+    color: white;
+}
+footer> .foot_second>.text> .sns> p{
+    width: 30%; height: 100%;
+    margin-left: 2%;
+    font-size: 1.3rem;
+}
+footer> .foot_second>.text> .customer{
+    width: 100%; height: 100px;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #888988;
+}
